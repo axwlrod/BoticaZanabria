@@ -34,6 +34,11 @@ public class CategoriaServiceImpl implements ICategoriaService {
     public Categoria buscarPorId(Integer id) {
         return categoriaRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public List<Categoria> listarActivos() {
+        return categoriaRepository.findByActivoTrue();
+    }
     
     
 }

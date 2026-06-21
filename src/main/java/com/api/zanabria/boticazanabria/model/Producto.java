@@ -19,6 +19,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,15 +38,15 @@ public class Producto {
     private BigDecimal precio;
     
     @Column(nullable=false)
-    private int stockActual;
+    private Integer stockActual;
     @Column(nullable=false)
-    private int stockMinimo;
+    private Integer stockMinimo;
     
     @Column(nullable=false)
     private LocalDate fechaVencimiento;
     
     @Column(nullable=false)
-    private boolean activo=true;
+    private Boolean activo=true;
     
     @ManyToOne
     @JoinColumn(name = "idCategoria")

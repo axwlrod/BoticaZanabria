@@ -8,6 +8,12 @@ public interface IProductoService {
     Producto modificarProducto(Producto producto);
     void eliminarProducto(Integer id);
     
-    List<Producto> listarTodos();
+    List<Producto> listarTodos();   
     Producto buscarPorId(Integer id);
+    
+    List<Producto> buscarPorNombre(String nombre);
+    
+    Producto buscarPorCodigoBarra(String codigoBarra);
+    
+    void actualizarStock(Integer idProducto, int cantidad);
 }

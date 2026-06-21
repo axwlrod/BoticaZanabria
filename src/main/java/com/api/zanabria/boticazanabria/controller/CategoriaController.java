@@ -38,4 +38,9 @@ public class CategoriaController {
     public void eliminar(@PathVariable Integer id){
         categoriaService.eliminarCategoria(id);
     }
+    
+    @GetMapping("/activas")
+    public List<Categoria> listarActivos(){
+     return categoriaService.listarActivos();
+    }
 }
