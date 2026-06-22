@@ -44,4 +44,5 @@ public class ProveedorController {
     public List<Proveedor> buscarPorRazonSocial(@RequestParam String razonSocial) {
         return proveedorService.buscarPorRazonSocial(razonSocial);
     }
+    
 }

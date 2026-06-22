@@ -5,7 +5,7 @@ import com.api.zanabria.boticazanabria.repository.CategoriaRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-@Service
+@Service 
 public class CategoriaServiceImpl implements ICategoriaService {
     @Autowired
     private CategoriaRepository categoriaRepository; 

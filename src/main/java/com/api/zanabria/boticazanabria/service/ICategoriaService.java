@@ -11,6 +11,5 @@ public interface ICategoriaService {
     
     List<Categoria> listarTodos();
     Categoria buscarPorId(Integer id);
-    
     List<Categoria> listarActivos();
 }
