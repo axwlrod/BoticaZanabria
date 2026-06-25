@@ -16,4 +16,6 @@ public interface IProductoService {
     Producto buscarPorCodigoBarra(String codigoBarra);
     
     void actualizarStock(Integer idProducto, int cantidad);
+    
+    void corregirStock(Integer idProducto, int nuevoStock);
 }

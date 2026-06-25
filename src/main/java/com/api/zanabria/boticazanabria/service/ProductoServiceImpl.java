@@ -55,4 +55,13 @@ public class ProductoServiceImpl implements IProductoService {
         productoRepository.save(producto);
     }
     
+    @Override
+    @Transactional
+    public void corregirStock(Integer idProducto, int nuevoStock) {
+        Producto producto = productoRepository.findById(idProducto).orElseThrow(() -> new RuntimeException("Producto No encontrado"));
+
+        producto.setStockActual(nuevoStock);
+        productoRepository.save(producto);
+    }
+    
 }
